@@ -61,4 +61,4 @@ pnpm --filter @gvibe/desktop bundle
 pnpm --filter @gvibe/desktop tauri build --config src-tauri/tauri.bundle.conf.json
 ```
 
-The release workflow builds unsigned `.dmg`, `.msi`, `.exe`, `.deb`, and `.AppImage` artifacts from `desktop-v*` tags or a manual dispatch. Platform security prompts are expected until signing and notarization are configured.
+Releases go through `.github/workflows/release.yml`, which calls the shared [Labyrica release workflow](https://github.com/Labyrica/.github/blob/main/RELEASING.md). Bump the version in `package.json`, `src-tauri/Cargo.toml` and `src-tauri/tauri.conf.json`, then push a matching `vX.Y.Z` tag. Signed updater artifacts are mirrored to [Labyrica/foundry-godot-releases](https://github.com/Labyrica/foundry-godot-releases). CLI/addon source releases use `cli-vX.Y.Z` tags so they never trigger a desktop build. macOS builds are not notarized unless Apple secrets are configured, so expect a one-time "Open Anyway".

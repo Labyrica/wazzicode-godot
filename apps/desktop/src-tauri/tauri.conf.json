@@ -46,7 +46,9 @@
     ],
     "category": "DeveloperTool",
     "shortDescription": "Make Godot scene, resource, and script changes with AI.",
-    "longDescription": "Foundry for Godot understands your project map, inspects live scenes and nodes, previews the 2D or 3D editor, and applies changes through the Godot Vibe OS addon."
+    "longDescription": "Foundry for Godot understands your project map, inspects live scenes and nodes, previews the 2D or 3D editor, and applies changes through the Godot Vibe OS addon.",
+    "publisher": "Labyrica",
+    "createUpdaterArtifacts": true
   },
   "plugins": {}
 }
